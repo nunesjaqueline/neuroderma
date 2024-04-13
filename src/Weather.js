@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 export  const Weather = ({changeImg}) => {
   const [weatherData, setWeatherData] = useState(null);
-  const API_Key = '7acaaebb14a273a52dc6c2adad239cd4';
+  const API_Key = 'f56beb418d30a504ce81d5126e6f52c2';
 
   useEffect(() => {
    

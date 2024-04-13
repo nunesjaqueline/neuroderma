@@ -6,7 +6,7 @@ export function UvIndex({ lng, lat }) {
 
     useEffect(() => {
         const myHeaders = new Headers();
-        myHeaders.append("x-access-token", "openuv-rwselkrluxv15dj-io");  
+        myHeaders.append("x-access-token", "openuv-rwselkrluyacs7p-io");
         myHeaders.append("Content-Type", "application/json");
 
         const requestOptions = {
