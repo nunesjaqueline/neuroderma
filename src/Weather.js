@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-export  const Weather = (changeImg) => {
+export  const Weather = ({changeImg}) => {
   const [weatherData, setWeatherData] = useState(null);
   const API_Key = '7acaaebb14a273a52dc6c2adad239cd4';
 
@@ -24,7 +24,7 @@ export  const Weather = (changeImg) => {
     };
 
     fetchWeatherData();
-  }); // Empty dependency array ensures this effect runs only once
+  },[]); // Empty dependency array ensures this effect runs only once
 
   return (
     <div>
