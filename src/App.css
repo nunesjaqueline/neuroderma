@@ -23,9 +23,46 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+.App-content {
+  background-color: #282c34;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
 
 .App-link {
   color: #61dafb;
+}
+
+#api-widgets {
+  background-color: cornflowerblue;
+  color: white;
+  min-width: 150px;
+  width: 80%;
+  height: 15%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  margin: 10px;
+}
+
+.api-widget {
+  width: 25%;
+  height: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 150px;
+}
+
+.api-widget-text {
+  margin: 0px;
 }
 
 @keyframes App-logo-spin {

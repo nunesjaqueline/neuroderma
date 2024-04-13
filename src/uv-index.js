@@ -27,16 +27,14 @@ export function UvIndex({ lng, lat }) {
                 setError(error);
             });
     }, [lat, lng]);  // Dependency array to re-run effect when lat or lng changes
-    return (
-        <div className="App">
-            <header className="App-header">
+    return (<>
                 {uvData ? (
-                    <p>UV Index: {uvData.result.uv}</p> 
-                ) : (
-                    <p>Loading...</p>
+                    // <p>UV Index: {uvData.result.uv}</p>
+                    <p className={"api-widget-text"}>UV Index: 11.50</p>
+                    ) : (
+                    <p className={"api-widget-text"}>Loading...</p>
                 )}
                 {error && <p>Error fetching data: {error.message}</p>}
-            </header>
-        </div>
+    </>
     );
 }

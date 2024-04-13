@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import { UvIndex } from './uv-index';
+import {ApiWidgetList} from "./ApiWidgetList";
 
 function App() {
   return (
@@ -10,10 +10,9 @@ function App() {
         <p>
           NEURODERMATITIS
         </p>
-
       </header>
-      <div>
-    <UvIndex lng={48.084} lat={16.422} />
+        <div className="App-content">
+        <div id="api-widgets"><ApiWidgetList></ApiWidgetList></div>
         </div>
     </div>
   );
