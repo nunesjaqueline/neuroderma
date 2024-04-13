@@ -13,10 +13,7 @@ export  const Weather = ({changeImg}) => {
           throw new Error('Failed to fetch weather data');
         }
         const data = await response.json();
-        console.log(data);
         setWeatherData(data);
-        console.log(typeof data.weather);
-        console.log(`http://openweathermap.org/img/w/${data.weather[0].icon}.png`)
         changeImg(`http://openweathermap.org/img/w/${data.weather[0].icon}.png`);
       } catch (error) {
         console.error('Error fetching weather data:', error);
@@ -29,14 +26,16 @@ export  const Weather = ({changeImg}) => {
   return (
     <div>
       {weatherData ? (
-        <div>
-          {weatherData.weather[0].description}
-         
-          <p>Luftfeuchtigkeit: {weatherData.main.humidity}</p>
-
-        </div>
+          <div>
+            <p className={"text"}>
+              {weatherData.weather[0].description}
+            </p>
+            <p className={"text"}>
+              Luftfeuchtigkeit: {weatherData.main.humidity}
+            </p>
+          </div>
       ) : (
-        <p>Loading...</p>
+          <p>Loading...</p>
       )}
     </div>
   );

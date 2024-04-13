@@ -4,8 +4,7 @@ import {UvIndex} from "./uv-index";
 
 export function ApiWidget({img, title, type}){
     const [image, setImage] = useState(img);
-    console.log("ApiWidget");
-    
+
         switch (type){
             case "uv":
                 return (
@@ -19,4 +18,3 @@ export function ApiWidget({img, title, type}){
                 return(<div></div>)
         }
     }
-
